@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="{% static 'css/result.css' %}">
+</head>
+<body>
+<div class="bg-container" style="background-image: url('{% static "brand/logo.png" %}');"></div>
+    <div class="results-container">
+        <h1>Quiz Completed!</h1>
+        <h2>Your Score</h2>
+        <!-- Dynamically insert score percentage here -->
+        <div class="score">{{ user_point }}%</div>
+        
+        <!-- Display user stats -->
+        <div class="stats">
+            <p><strong>Name:</strong> {{ username }}</p>
+            <p><strong>Total Questions:</strong> {{ quiz_total }}</p>
+            <p><strong>Correct Answers:</strong> {{ correct }}</p>
+            <p><strong>Wrong Answers:</strong> {{ wrong }}</p>
+        </div>
+
+        <div class="message">Great job, keep up the good work!</div>
+        <div>
+            <a href="{% url 'home' %}"><button class="retry-btn">Retry Quiz</button></a>
+        </div>
+    </div>
+</body>
+</html>

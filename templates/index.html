@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="bg-container" style="background-image: url('{% static "brand/logo.png" %}');"></div>
+    <div class="quiz-container">
+        <div id="result"><h4 class="tim" id="timer" style="font-size:150%"></h4></div>
+        <h1>Quiz Time!</h1>
+        <div class="question">{{ queryset.question }}</div>
+
+        <form id="sa" method="post" action="{% url 'main' firstname surname code id user_id %}">
+            {% csrf_token %}
+            <ul class="answers">
+                {% for answer in answers %}
+                    <li>
+                        <input type="radio" name="answer" value="{{ answer.answer }}">
+                        <label for="answer3">{{ answer.answer }}jkhhkjhjkhjkhjkhjkhkjjkhhkjhjkhjkhjkhjkhkjjkhhkjhjkhjkhjkhjkhkj</label>
+                    </li>
+                {% endfor %}
+            </ul>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    <link href="{% static 'css/swal.css' %}" rel="stylesheet">
+    <script src="{% static 'css/swal.js' %}"></script>
+    <script>
+        const timerElement = document.getElementById("timer");
+        let seconds = {{duration}};
+        const countdownSound = new Audio("{% static 'ringtone/clock.mp3' %}");
+
+        function updateTimer() {
+            const minutes = Math.floor(seconds / 60);
+            const secondsRemaining = seconds % 60;
+
+            const timerText = `${minutes.toString().padStart(2, '0')}:${secondsRemaining.toString().padStart(2, '0')}`;
+            timerElement.textContent = timerText;
+            if (seconds <= 10) {
+                timerElement.style.color = 'red';
+                countdownSound.play();
+
+            }
+
+            if (seconds > 0) {
+                seconds--;
+                setTimeout(updateTimer, 1000);
+            } else {
+            document.getElementById("sa").submit();
+
+            }
+        }
+
+        updateTimer();
+    </script>
+    
+</body>
+</html>

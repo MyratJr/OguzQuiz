@@ -1,0 +1,334 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>English Grammar Test</title>
+  <link rel="stylesheet" href="{% static 'css/practice.css' %}">
+</head>
+<body>
+<div class="bg-container" style="background-image: url('{% static "brand/logo.png" %}');"></div>
+  <div class="quiz-container">
+    <h1>English Grammar Test</h1>
+    <form id="quiz-form">
+      <!-- Example Question 1 -->
+      <div class="question hidden" id="question1">
+        <p>1. Which sentence is grammatically correct?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q1" value="a"> <label>A) He don't like pizza.</label></li>
+          <li><input type="radio" name="q1" value="b"> <label>B) He doesn't likes pizza.</label></li>
+          <li><input type="radio" name="q1" value="c"> <label>C) He doesn't like pizza.</label></li>
+          <li><input type="radio" name="q1" value="d"> <label>D) He doesn't liked pizza.</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+
+      <!-- Example Question 2 -->
+      <div class="question hidden" id="question2">
+        <p>2. Choose the correct form of the verb: "She ______ to the store every day."</p>
+        <ul class="answers">
+          <li><input type="radio" name="q2" value="a"> <label>A) go</label></li>
+          <li><input type="radio" name="q2" value="b"> <label>B) going</label></li>
+          <li><input type="radio" name="q2" value="c"> <label>C) goes</label></li>
+          <li><input type="radio" name="q2" value="d"> <label>D) gone</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      <div class="question hidden" id="question3">
+        <p>3. Which word is a noun?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q3" value="a"> <label>A) quickly</label></li>
+            <li><input type="radio" name="q3" value="b"> <label>B) happy</label></li>
+            <li><input type="radio" name="q3" value="c"> <label>C) book</label></li>
+            <li><input type="radio" name="q3" value="d"> <label>D) run</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question4">
+        <p>4. Which sentence uses the correct preposition?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q4" value="a"> <label>A) I am interested in music.</label></li>
+            <li><input type="radio" name="q4" value="b"> <label>B) She is good at math.</label></li>
+            <li><input type="radio" name="q4" value="c"> <label>C) They are afraid of dogs.</label></li>
+            <li><input type="radio" name="q4" value="d"> <label>D) All of the above.</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question5">
+        <p>5. Which sentence is in the past tense?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q5" value="a"> <label>A) I eat breakfast every morning.</label></li>
+            <li><input type="radio" name="q5" value="b"> <label>B) She is singing a song.</label></li>
+            <li><input type="radio" name="q5" value="c"> <label>C) They will go to the park tomorrow.</label></li>
+            <li><input type="radio" name="q5" value="d"> <label>D) Yesterday, I went to the beach.</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question6">
+        <p>6. Which word is an adjective?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q6" value="a"> <label>A) quickly</label></li>
+            <li><input type="radio" name="q6" value="b"> <label>B) happy</label></li>
+            <li><input type="radio" name="q6" value="c"> <label>C) book</label></li>
+            <li><input type="radio" name="q6" value="d"> <label>D) run</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question7">
+        <p>7. Which sentence uses the correct article?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q7" value="a"> <label>A) I saw a cat.</label></li>
+            <li><input type="radio" name="q7" value="b"> <label>B) She is the tallest girl in the class.</label></li>
+            <li><input type="radio" name="q7" value="c"> <label>C) I love to eat apple.</label></li>
+            <li><input type="radio" name="q7" value="d"> <label>D) All of the above.</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question8">
+        <p>8. Which sentence is in the future tense?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q8" value="a"> <label>A) I ate pizza yesterday.</label></li>
+            <li><input type="radio" name="q8" value="b"> <label>B) She is singing a song.</label></li>
+            <li><input type="radio" name="q8" value="c"> <label>C) They will go to the park tomorrow.</label></li>
+            <li><input type="radio" name="q8" value="d"> <label>D) I am watching TV now.</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question9">
+        <p>9. Which word is a verb?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q9" value="a"> <label>A) quickly</label></li>
+            <li><input type="radio" name="q9" value="b"> <label>B) happy</label></li>
+            <li><input type="radio" name="q9" value="c"> <label>C) book</label></li>
+            <li><input type="radio" name="q9" value="d"> <label>D) run</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    
+    <div class="question hidden" id="question10">
+        <p>10. Which sentence uses the correct pronoun?</p>
+        <ul class="answers">
+            <li><input type="radio" name="q10" value="a"> <label>A) Me and you should go to the store.</label></li>
+            <li><input type="radio" name="q10" value="b"> <label>B) This is your book.</label></li>
+            <li><input type="radio" name="q10" value="c"> <label>C) They are going to the party.</label></li>
+            <li><input type="radio" name="q10" value="d"> <label>D) All of the above.</label></li>
+        </ul>
+        <div class="result"></div>
+    </div>
+    <!--<div class="question hidden" id="question11">
+        <p>11. Choose the correct sentence:</p>
+        <ul class="answers">
+          <li><input type="radio" name="q3" value="a"> <label>A) She can sings well.</label></li>
+          <li><input type="radio" name="q3" value="b"> <label>B) She can sing well.</label></li>
+          <li><input type="radio" name="q3" value="c"> <label>C) She can singing well.</label></li>
+          <li><input type="radio" name="q3" value="d"> <label>D) She can sung well.</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question12">
+        <p>12. Identify the correct article: "I need ______ umbrella because it is raining."</p>
+        <ul class="answers">
+          <li><input type="radio" name="q4" value="a"> <label>A) a</label></li>
+          <li><input type="radio" name="q4" value="b"> <label>B) an</label></li>
+          <li><input type="radio" name="q4" value="c"> <label>C) the</label></li>
+          <li><input type="radio" name="q4" value="d"> <label>D) no article</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question13">
+        <p>13. Choose the correct preposition: "She is good ______ cooking."</p>
+        <ul class="answers">
+          <li><input type="radio" name="q5" value="a"> <label>A) in</label></li>
+          <li><input type="radio" name="q5" value="b"> <label>B) on</label></li>
+          <li><input type="radio" name="q5" value="c"> <label>C) at</label></li>
+          <li><input type="radio" name="q5" value="d"> <label>D) with</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question14">
+        <p>14. Which sentence is in the past tense?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q6" value="a"> <label>A) She write a letter.</label></li>
+          <li><input type="radio" name="q6" value="b"> <label>B) She writes a letter.</label></li>
+          <li><input type="radio" name="q6" value="c"> <label>C) She is writing a letter.</label></li>
+          <li><input type="radio" name="q6" value="d"> <label>D) She wrote a letter.</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question15">
+        <p>15. Choose the correct plural form: "There are several ______ on the table."</p>
+        <ul class="answers">
+          <li><input type="radio" name="q7" value="a"> <label>A) book</label></li>
+          <li><input type="radio" name="q7" value="b"> <label>B) books</label></li>
+          <li><input type="radio" name="q7" value="c"> <label>C) bookes</label></li>
+          <li><input type="radio" name="q7" value="d"> <label>D) bookes</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question16">
+        <p>16. Which sentence uses the correct form of "to be"?</p>
+        <ul class="answers">
+          <li><input type="radio" name="q8" value="a"> <label>A) They am happy.</label></li>
+          <li><input type="radio" name="q8" value="b"> <label>B) They is happy.</label></li>
+          <li><input type="radio" name="q8" value="c"> <label>C) They are happy.</label></li>
+          <li><input type="radio" name="q8" value="d"> <label>D) They be happy.</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question17">
+        <p>17. Choose the correct comparative form: "This book is ______ than that one."</p>
+        <ul class="answers">
+          <li><input type="radio" name="q9" value="a"> <label>A) more interesting</label></li>
+          <li><input type="radio" name="q9" value="b"> <label>B) most interesting</label></li>
+          <li><input type="radio" name="q9" value="c"> <label>C) interestinger</label></li>
+          <li><input type="radio" name="q9" value="d"> <label>D) interestinger</label></li>
+        </ul>
+        <div class="result"></div>
+      </div>
+      
+      <div class="question hidden" id="question18">
+        <p>18. Choose the correct form of the noun: "The children are playing with their ______."</p>
+        <ul class="answers">
+          <li><input type="radio" name="q10" value="a"> <label>A) toys</label></li>
+          <li><input type="radio" name="q10" value="b"> <label>B) toy</label></li>
+          <li><input type="radio" name="q10" value="c"> <label>C) toyes</label></li>
+          <li><input type="radio" name="q10" value="d"> <label>D) toy's</label></li>
+        </ul>
+        <div class="result"></div>
+      </div> -->
+
+      <!-- Add more questions following the same pattern -->
+
+      <button type="button" class="submit-btn" onclick="submitQuiz()">Submit</button>
+
+      <!-- End quiz buttons -->
+      <div class="end-buttons hidden" id="end-buttons">
+        <button><a href="{% url 'index' %}" style="text-decoration: none;color:white">Home</a></button>
+        <button><a href="{% url 'offline' %}" style="text-decoration: none;color:white">Retry Quiz</a></button>
+      </div>
+    </form>
+  </div>
+
+  <script>
+    const correctAnswers = {
+      q1: 'c',
+      q2: 'c',
+      q3: 'c',
+      q4: 'd',
+      q5: 'd',
+      q6: 'b',
+      q7: 'd',
+      q8: 'c',
+      q9: 'd',
+      q10: 'b',
+      //q11: 'b', // Added for the new questions
+      //q12: 'b',
+      //q13: 'c',
+      //q14: 'd',
+      //q15: 'b',
+      //q16: 'c',
+      //q17: 'a',
+      //q18: 'a',
+    };
+  
+    let currentQuestion = 1;
+    const totalQuestions = 10; // Updated to match the total number of questions
+    let score = 0; // Initialize score
+  
+    // Show the first question
+    document.getElementById(`question${currentQuestion}`).classList.remove('hidden');
+  
+    function submitQuiz() {
+      let questionElem = document.querySelector(`input[name="q${currentQuestion}"]:checked`);
+      let resultElem = document.getElementById(`question${currentQuestion}`).querySelector('.result');
+      let answerElems = document.querySelectorAll(`#question${currentQuestion} .answers li`);
+      const correctSound = new Audio("{% static 'ringtone/correct.mp3' %}");
+      const wrongSound = new Audio("{% static 'ringtone/wrong.mp3' %}");
+  
+      // Reset previous styles
+      answerElems.forEach(li => {
+        li.classList.remove('correct-answer', 'wrong-answer');
+      });
+  
+      if (questionElem) {
+        let userAnswer = questionElem.value;
+  
+        // Apply styles to the answers
+        answerElems.forEach(li => {
+          let input = li.querySelector('input');
+          if (input && input.value === correctAnswers[`q${currentQuestion}`]) {
+            li.classList.add('correct-answer');
+          } else if (input && input.value === userAnswer) {
+            li.classList.add('wrong-answer');
+          }
+        });
+  
+        if (userAnswer === correctAnswers[`q${currentQuestion}`]) {
+          correctSound.play();
+          score++; // Increment score for correct answers
+        } else {
+          wrongSound.play();
+        }
+  
+        // Show next question after a short delay
+        setTimeout(() => {
+          document.getElementById(`question${currentQuestion}`).classList.add('hidden');
+          currentQuestion++;
+  
+          if (currentQuestion <= totalQuestions) {
+            document.getElementById(`question${currentQuestion}`).classList.remove('hidden');
+          } else {
+            document.getElementById('end-buttons').classList.remove('hidden');
+            document.querySelector('.submit-btn').classList.add('hidden');
+            
+            // Calculate percentage and display result
+            let percentage = (score / totalQuestions) * 100;
+            let rating = '';
+            
+            if (percentage >= 90) {
+              rating = 'Excellent';
+            } else if (percentage >= 70) {
+              rating = 'Good';
+            } else if (percentage >= 50) {
+              rating = 'Normal';
+            } else {
+              rating = 'Bad';
+            }
+            
+            document.getElementById('end-buttons').innerHTML += `
+              <p style="margin-top:10px;font-size:20px">Your score: ${score} out of ${totalQuestions} (${percentage.toFixed(2)}%)</p>
+              <p style="font-size:20px">Your performance: ${rating}</p>
+            `;
+          }
+        }, 1000); // Delay of 1 second before moving to the next question
+      } else {
+        resultElem.innerHTML = '<span class="wrong">No answer selected!</span>';
+      }
+    }
+  
+    function restartQuiz() {
+      currentQuestion = 1;
+      score = 0; // Reset score
+      document.querySelector('.end-buttons').classList.add('hidden');
+      document.querySelector('.submit-btn').classList.remove('hidden');
+      document.getElementById('question1').classList.remove('hidden');
+      document.querySelectorAll('.question').forEach(q => q.classList.add('hidden'));
+      document.getElementById('question1').classList.remove('hidden');
+    }
+  </script>
+  
+</body>
+</html>

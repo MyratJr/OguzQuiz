@@ -1,0 +1,142 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.quiz-container {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeInUp 1s ease-out;
+}
+
+.quiz-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.quiz-container h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.question {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.answers {
+    list-style: none;
+    padding: 0;
+}
+
+.answers li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.answers input[type="radio"] {
+    margin-right: 10px;
+}
+
+.submit-btn {
+    padding: 15px 40px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    background: linear-gradient(90deg, #43cea2, #185a9d);
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background 0.3s;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tim {
+    padding-left: 87%;
+    margin-top: -1%;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    text-align: left;
+}
+
+label {
+    margin-left: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    display: inline-block;
+    width: 87%;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    
+    width: 20px;   /* Custom width */
+    height: 7px;  /* Custom height */
+    border: 11px solid white;   /* Outline as border */
+    position: relative;
+    border-radius: 50px;        /* For inner dot positioning */
+    cursor: pointer;
+}
+
+/* Custom inner circle when checked */
+input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #764ba2;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.bg-container {
+    position: absolute;
+    width: 119%;
+    opacity: 0.1;
+    height: 100vh; /* Full viewport height */
+  }

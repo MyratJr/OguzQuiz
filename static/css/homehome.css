@@ -1,0 +1,66 @@
+/* Reset default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+    
+}
+
+/* Button container to hold the quiz buttons */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* General styles for quiz buttons */
+.quiz-btn {
+    display: inline-block;
+    padding: 15px 40px;
+    font-size: 1.5em;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #43cea2, #185a9d);
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.quiz-btn:hover {
+    background: linear-gradient(90deg, #ff6a00, #ee0979);
+    transform: scale(1.05);
+}
+
+/* Specific styles for Online Quiz button */
+.online-quiz-btn {
+    background: linear-gradient(90deg, #43cea2, #185a9d);
+    z-index: 2;
+}
+
+/* Specific styles for Offline Practice button */
+.offline-practice-btn {
+    background: linear-gradient(90deg, #f79c42, #f9ab3f);
+    z-index: 2;
+
+}
+
+
+.bg-container {
+    position: absolute;
+    width: 119%;
+    opacity: 0.1;
+    height: 100vh; /* Full viewport height */
+  }

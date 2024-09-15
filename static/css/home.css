@@ -1,0 +1,101 @@
+/* Reset default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.quiz-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 600px;
+  width: 100%;
+  height: 95%;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  animation: fadeInUp 1s ease-out;
+}
+
+.quiz-container h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.quiz-container p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-size: 1.1em;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.submit-btn {
+  padding: 15px 40px;
+  font-size: 1.2em;
+  border-radius: 25px;
+  background: linear-gradient(90deg, #43cea2, #185a9d);
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background 0.3s;
+  margin-top: -1vh;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 20%;
+  margin-top: -3%;
+  margin-bottom: -10%;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.bg-container {
+  position: absolute;
+  width: 119%;
+  opacity: 0.1;
+  height: 100vh; /* Full viewport height */
+}
